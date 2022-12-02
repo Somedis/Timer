@@ -4,13 +4,13 @@ from PyQt6 import QtWidgets
 
 from alarm_clock_instal import AlarmClockFunc
 
-from alarm_clock_result import UiAlarmClockResult
+from alarm_clock_result import AlarmClockResultFunc
 
 from menu import MainMenu
 
 from timer_instal import TimerFunc
 
-from timer_result import UiTimerResult
+from timer_result import TimerResultFunc
 
 
 class StartMenu(QtWidgets.QMainWindow):
@@ -20,9 +20,9 @@ class StartMenu(QtWidgets.QMainWindow):
 
         self.menu = MainMenu()
         self.timer = TimerFunc()
-        self.timerResult = UiTimerResult()
+        self.timerResult = TimerResultFunc()
         self.alarmClock = AlarmClockFunc()
-        self.alarmClockResult = UiAlarmClockResult()
+        self.alarmClockResult = AlarmClockResultFunc()
 
         self.main_menu()
 
