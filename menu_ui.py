@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'Alarmclock_Timer.ui'
+# Form implementation generated from reading ui file 'menu.ui'
 #
 # Created by: PyQt6 UI code generator 6.3.1
 #
@@ -9,70 +9,70 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class UiMainWindow(object):
-    def setup_ui(self, main_window):
-        main_window.setObjectName("main_window")
-        main_window.setWindowModality(QtCore.Qt.WindowModality.NonModal)
-        main_window.setEnabled(True)
-        main_window.resize(600, 500)
-        main_window.setMinimumSize(QtCore.QSize(600, 500))
-        main_window.setMaximumSize(QtCore.QSize(600, 500))
-        main_window.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
-        main_window.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.DefaultContextMenu)
-        main_window.setStyleSheet("background-color: #0d1131;")
-        main_window.setIconSize(QtCore.QSize(24, 24))
-        main_window.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonIconOnly)
-        main_window.setAnimated(False)
-        main_window.setTabShape(QtWidgets.QTabWidget.TabShape.Rounded)
-        self.centralwidget = QtWidgets.QWidget(main_window)
+class UiMenu(object):
+    def setup_ui(self, menu):
+        menu.setObjectName("menu")
+        menu.setWindowModality(QtCore.Qt.WindowModality.NonModal)
+        menu.setEnabled(True)
+        menu.resize(600, 500)
+        menu.setMinimumSize(QtCore.QSize(600, 500))
+        menu.setMaximumSize(QtCore.QSize(600, 500))
+        menu.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
+        menu.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.DefaultContextMenu)
+        menu.setStyleSheet("background-color: #0d1131;")
+        menu.setIconSize(QtCore.QSize(24, 24))
+        menu.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonIconOnly)
+        menu.setAnimated(False)
+        menu.setTabShape(QtWidgets.QTabWidget.TabShape.Rounded)
+        self.centralwidget = QtWidgets.QWidget(menu)
         self.centralwidget.setObjectName("centralwidget")
-        self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(10, 10, 580, 480))
-        self.frame.setStyleSheet("background-color: #181b3f;\n"
-                                 "border-radius: 20")
-        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame.setObjectName("frame")
-        self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(0, 0, 580, 130))
-        self.frame_2.setStyleSheet("background-color: #282e5c;\n"
-                                   "border-radius: 20")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_2)
-        self.label_3.setGeometry(QtCore.QRect(100, 35, 461, 60))
+        self.frame_main = QtWidgets.QFrame(self.centralwidget)
+        self.frame_main.setGeometry(QtCore.QRect(10, 10, 580, 480))
+        self.frame_main.setStyleSheet("background-color: #181b3f;\n"
+                                      "border-radius: 20")
+        self.frame_main.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_main.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_main.setObjectName("frame_main")
+        self.frame_top = QtWidgets.QFrame(self.frame_main)
+        self.frame_top.setGeometry(QtCore.QRect(0, 0, 580, 130))
+        self.frame_top.setStyleSheet("background-color: #282e5c;\n"
+                                     "border-radius: 20")
+        self.frame_top.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_top.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_top.setObjectName("frame_top")
+        self.label_title = QtWidgets.QLabel(self.frame_top)
+        self.label_title.setGeometry(QtCore.QRect(100, 35, 461, 60))
         font = QtGui.QFont()
         font.setFamily("Unispace")
         font.setPointSize(24)
         font.setBold(True)
         font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setStyleSheet("color: white;\n"
-                                   "")
-        self.label_3.setTextFormat(QtCore.Qt.TextFormat.AutoText)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.frame_2)
-        self.label_4.setGeometry(QtCore.QRect(20, 15, 70, 100))
-        self.label_4.setText("")
-        self.label_4.setPixmap(QtGui.QPixmap("../../Desktop/Python/timer/sendtimepick1.png"))
-        self.label_4.setObjectName("label_4")
-        self.frame_3 = QtWidgets.QFrame(self.frame)
-        self.frame_3.setGeometry(QtCore.QRect(10, 140, 275, 330))
-        self.frame_3.setAcceptDrops(False)
-        self.frame_3.setStyleSheet("background-color: #282e5c;\n"
-                                   "border-radius: 20")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.label = QtWidgets.QLabel(self.frame_3)
-        self.label.setGeometry(QtCore.QRect(37, 30, 200, 185))
-        self.label.setAcceptDrops(False)
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("../../Desktop/Python/timer/alarmclock_icon1___копия-removebg-preview.png"))
-        self.label.setObjectName("label")
-        self.alarm_btn = QtWidgets.QPushButton(self.frame_3)
-        self.alarm_btn.setGeometry(QtCore.QRect(42, 250, 190, 45))
+        self.label_title.setFont(font)
+        self.label_title.setStyleSheet("color: white;\n"
+                                       "")
+        self.label_title.setTextFormat(QtCore.Qt.TextFormat.AutoText)
+        self.label_title.setObjectName("label_title")
+        self.label_titlePic = QtWidgets.QLabel(self.frame_top)
+        self.label_titlePic.setGeometry(QtCore.QRect(20, 15, 70, 100))
+        self.label_titlePic.setText("")
+        self.label_titlePic.setPixmap(QtGui.QPixmap("pics/send_time.png"))
+        self.label_titlePic.setObjectName("label_titlePic")
+        self.frame_left = QtWidgets.QFrame(self.frame_main)
+        self.frame_left.setGeometry(QtCore.QRect(10, 140, 275, 330))
+        self.frame_left.setAcceptDrops(False)
+        self.frame_left.setStyleSheet("background-color: #282e5c;\n"
+                                      "border-radius: 20")
+        self.frame_left.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_left.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_left.setObjectName("frame_left")
+        self.label_picAC = QtWidgets.QLabel(self.frame_left)
+        self.label_picAC.setGeometry(QtCore.QRect(37, 30, 200, 185))
+        self.label_picAC.setAcceptDrops(False)
+        self.label_picAC.setText("")
+        self.label_picAC.setPixmap(QtGui.QPixmap("pics/alarmclock_menu.png"))
+        self.label_picAC.setObjectName("label_picAC")
+        self.button_alarmClock = QtWidgets.QPushButton(self.frame_left)
+        self.button_alarmClock.setGeometry(QtCore.QRect(42, 250, 190, 45))
         font = QtGui.QFont()
         font.setFamily("Unispace")
         font.setPointSize(16)
@@ -80,82 +80,82 @@ class UiMainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         font.setKerning(True)
-        self.alarm_btn.setFont(font)
-        self.alarm_btn.setStyleSheet("QPushButton {    \n"
-                                     "    border: 3px solid #3051a8;\n"
-                                     "    border-radius: 20;\n"
-                                     "    color: white;\n"
-                                     "}\n"
-                                     "\n"
-                                     "QPushButton:hover {\n"
-                                     "    background-color: #3051a8\n"
-                                     "}\n"
-                                     "\n"
-                                     "QPushButton:pressed {\n"
-                                     "    background-color: #3bf3d4\n"
-                                     "}")
-        self.alarm_btn.setObjectName("alarm_btn")
-        self.frame_4 = QtWidgets.QFrame(self.frame)
-        self.frame_4.setGeometry(QtCore.QRect(295, 140, 275, 330))
-        self.frame_4.setAcceptDrops(False)
-        self.frame_4.setStyleSheet("background-color: #282e5c;\n"
-                                   "border-radius: 20")
-        self.frame_4.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.timer_btn = QtWidgets.QPushButton(self.frame_4)
-        self.timer_btn.setGeometry(QtCore.QRect(42, 250, 190, 45))
+        self.button_alarmClock.setFont(font)
+        self.button_alarmClock.setStyleSheet("QPushButton {    \n"
+                                             "    border: 3px solid #3051a8;\n"
+                                             "    border-radius: 20;\n"
+                                             "    color: white;\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:hover {\n"
+                                             "    background-color: #3051a8\n"
+                                             "}\n"
+                                             "\n"
+                                             "QPushButton:pressed {\n"
+                                             "    background-color: #3bf3d4\n"
+                                             "}")
+        self.button_alarmClock.setObjectName("button_alarmClock")
+        self.frame_right = QtWidgets.QFrame(self.frame_main)
+        self.frame_right.setGeometry(QtCore.QRect(295, 140, 275, 330))
+        self.frame_right.setAcceptDrops(False)
+        self.frame_right.setStyleSheet("background-color: #282e5c;\n"
+                                       "border-radius: 20")
+        self.frame_right.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_right.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_right.setObjectName("frame_right")
+        self.button_timer = QtWidgets.QPushButton(self.frame_right)
+        self.button_timer.setGeometry(QtCore.QRect(42, 250, 190, 45))
         font = QtGui.QFont()
         font.setFamily("Unispace")
         font.setPointSize(16)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.timer_btn.setFont(font)
-        self.timer_btn.setMouseTracking(False)
-        self.timer_btn.setTabletTracking(False)
-        self.timer_btn.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.DefaultContextMenu)
-        self.timer_btn.setAcceptDrops(False)
-        self.timer_btn.setStyleSheet("QPushButton {    \n"
-                                     "    border: 3px solid #3051a8;\n"
-                                     "    border-radius: 20;\n"
-                                     "    color: white;\n"
-                                     "}\n"
-                                     "\n"
-                                     "QPushButton:hover {\n"
-                                     "    background-color: #3051a8\n"
-                                     "}\n"
-                                     "\n"
-                                     "QPushButton:pressed {\n"
-                                     "    background-color: #3bf3d4\n"
-                                     "}")
-        self.timer_btn.setDefault(False)
-        self.timer_btn.setFlat(False)
-        self.timer_btn.setObjectName("timer_btn")
-        self.label_2 = QtWidgets.QLabel(self.frame_4)
-        self.label_2.setGeometry(QtCore.QRect(37, 25, 200, 185))
-        self.label_2.setAcceptDrops(False)
-        self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("../../Desktop/Python/timer/timer_icon_1.2 — копия.png"))
-        self.label_2.setObjectName("label_2")
-        main_window.setCentralWidget(self.centralwidget)
+        self.button_timer.setFont(font)
+        self.button_timer.setMouseTracking(False)
+        self.button_timer.setTabletTracking(False)
+        self.button_timer.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.DefaultContextMenu)
+        self.button_timer.setAcceptDrops(False)
+        self.button_timer.setStyleSheet("QPushButton {    \n"
+                                        "    border: 3px solid #3051a8;\n"
+                                        "    border-radius: 20;\n"
+                                        "    color: white;\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:hover {\n"
+                                        "    background-color: #3051a8\n"
+                                        "}\n"
+                                        "\n"
+                                        "QPushButton:pressed {\n"
+                                        "    background-color: #3bf3d4\n"
+                                        "}")
+        self.button_timer.setDefault(False)
+        self.button_timer.setFlat(False)
+        self.button_timer.setObjectName("button_timer")
+        self.label_picT = QtWidgets.QLabel(self.frame_right)
+        self.label_picT.setGeometry(QtCore.QRect(37, 25, 200, 185))
+        self.label_picT.setAcceptDrops(False)
+        self.label_picT.setText("")
+        self.label_picT.setPixmap(QtGui.QPixmap("pics/timer_menu.png"))
+        self.label_picT.setObjectName("label_picT")
+        menu.setCentralWidget(self.centralwidget)
 
-        self.retranslate_ui(main_window)
-        QtCore.QMetaObject.connectSlotsByName(main_window)
+        self.retranslate_ui(menu)
+        QtCore.QMetaObject.connectSlotsByName(menu)
 
-    def retranslate_ui(self, main_window):
+    def retranslate_ui(self, menu):
         _translate = QtCore.QCoreApplication.translate
-        main_window.setWindowTitle(_translate("main_window", "main_window"))
-        self.label_3.setText(_translate("main_window", "Select application type"))
-        self.alarm_btn.setText(_translate("main_window", "Alarm Clock"))
-        self.timer_btn.setText(_translate("main_window", "Timer"))
+        menu.setWindowTitle(_translate("menu", "MainWindow"))
+        self.label_title.setText(_translate("menu", "Select application type"))
+        self.button_alarmClock.setText(_translate("menu", "Alarm Clock"))
+        self.button_timer.setText(_translate("menu", "Timer"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    main_window = QtWidgets.QMainWindow()
-    ui = UiMainWindow()
-    ui.setupUi(main_window)
-    main_window.show()
+    menu = QtWidgets.QMainWindow()
+    ui = UiMenu()
+    ui.setup_ui(menu)
+    menu.show()
     sys.exit(app.exec())

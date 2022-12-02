@@ -2,51 +2,58 @@ import sys
 
 from PyQt6 import QtWidgets
 
+from alarm_clock_instal import AlarmClockFunc
+
+from alarm_clock_result import UiAlarmClockResult
+
 from menu import MainMenu
 
-from timer import TimerUpdate3
+from timer_instal import TimerFunc
 
-from timer_end_ui import UiTimerEnd
+from timer_result import UiTimerResult
 
 
-class StartMenu:
+class StartMenu(QtWidgets.QMainWindow):
 
     def __init__(self) -> None:
         super(StartMenu, self).__init__()
-        self.firstWindow = MainMenu()
-        self.secondWindow = TimerUpdate3()
-        self.thirdWindow = UiTimerEnd()
-        # self.main_menu()
 
-    def main_menu(self):
-        self.firstWindow.setupUi(self)
-        self.firstWindow.timer_btn.clicked.connect(self.second_win)
+        self.menu = MainMenu()
+        self.timer = TimerFunc()
+        self.timerResult = UiTimerResult()
+        self.alarmClock = AlarmClockFunc()
+        self.alarmClockResult = UiAlarmClockResult()
 
-    def second_win(self):
-        self.secondWindow.setupUi(self)
-        self.secondWindow.back_btn.clicked.connect(self.main_menu)
-        # self.secondWindow.set.
-        # self.secondWindow.run_btn.clicked.connect(self.secondWindow.run_timer)
-
-    def third_win(self):
-        self.thirdWindow.setupUi(self)
-        self.thirdWindow.menu_btn.clicked.connect(self.main_menu)
-        self.thirdWindow.res_btn.clicked.connect(self.second_win)
-
-
-class Timer(QtWidgets.QMainWindow, StartMenu):
-
-    def __init__(self) -> None:
-        super(Timer, self).__init__()
         self.main_menu()
 
-    # def set_timer(self):
-    #     Timer_Win2_Upd1.set_timer(self)
-    #     self.fourth_win()
+    def main_menu(self):
+        self.menu.setup_ui(self)
+        self.menu.button_timer.clicked.connect(self.set_timer)
+        self.menu.button_alarmClock.clicked.connect(self.set_alarm_clock)
+
+    def set_timer(self):
+        self.timer.setup_ui(self)
+        self.timer.button_back.clicked.connect(self.main_menu)
+        self.timer.transition.clicked.connect(self.result_timer)
+
+    def result_timer(self):
+        self.timerResult.setup_ui(self)
+        self.timerResult.button_menu.clicked.connect(self.main_menu)
+        self.timerResult.button_restart.clicked.connect(self.set_timer)
+
+    def set_alarm_clock(self):
+        self.alarmClock.setup_ui(self)
+        self.alarmClock.button_back.clicked.connect(self.main_menu)
+        self.alarmClock.transition.clicked.connect(self.result_alarm_clock)
+
+    def result_alarm_clock(self):
+        self.alarmClockResult.setup_ui(self)
+        self.alarmClockResult.button_menu.clicked.connect(self.main_menu)
+        self.alarmClockResult.button_restart.clicked.connect(self.set_alarm_clock)
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
-    ui = Timer()
+    ui = StartMenu()
     ui.show()
     sys.exit(app.exec())

@@ -1,9 +1,9 @@
 __pycache__
-Alarmclock_Timer.ui
-Timer_1win.ui
-Timer_2win.ui
-Timer_3win.ui
-Timer_Update.ui
-Timer_final_win.ui
-settings.json
 setup.cfg
+menu.ui
+timer_instal.ui
+timer_result.ui
+alarm_clock_instal.ui
+alarm_clock_result.ui
+alarm_clock_update.ui
+alarm_clock_update_2.ui

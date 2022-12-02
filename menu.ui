@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>menu</class>
+ <widget class="QMainWindow" name="menu">
   <property name="windowModality">
    <enum>Qt::NonModal</enum>
   </property>
@@ -56,7 +56,7 @@
    <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="frame_main">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -75,7 +75,7 @@ border-radius: 20</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="frame_top">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -94,7 +94,7 @@ border-radius: 20</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="label_title">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -122,7 +122,7 @@ border-radius: 20</string>
        <enum>Qt::AutoText</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="label_titlePic">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -135,11 +135,11 @@ border-radius: 20</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Python/timer/sendtimepick1.png</pixmap>
+       <pixmap>pics/send_time.png</pixmap>
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="frame_3">
+    <widget class="QFrame" name="frame_left">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -161,7 +161,7 @@ border-radius: 20</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="label_picAC">
       <property name="geometry">
        <rect>
         <x>37</x>
@@ -177,10 +177,10 @@ border-radius: 20</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Python/timer/alarmclock_icon1___копия-removebg-preview.png</pixmap>
+       <pixmap>pics/alarmclock_menu.png</pixmap>
       </property>
      </widget>
-     <widget class="QPushButton" name="alarm_btn">
+     <widget class="QPushButton" name="button_alarmClock">
       <property name="geometry">
        <rect>
         <x>42</x>
@@ -219,7 +219,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="frame_4">
+    <widget class="QFrame" name="frame_right">
      <property name="geometry">
       <rect>
        <x>295</x>
@@ -241,7 +241,7 @@ border-radius: 20</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QPushButton" name="timer_btn">
+     <widget class="QPushButton" name="button_timer">
       <property name="geometry">
        <rect>
         <x>42</x>
@@ -296,7 +296,7 @@ QPushButton:pressed {
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label_picT">
       <property name="geometry">
        <rect>
         <x>37</x>
@@ -312,7 +312,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Desktop/Python/timer/timer_icon_1.2 — копия.png</pixmap>
+       <pixmap>pics/timer_menu.png</pixmap>
       </property>
      </widget>
     </widget>
