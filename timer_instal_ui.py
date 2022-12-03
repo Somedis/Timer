@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtGui import QFontDatabase
 
 
 class UiTimer(object):
@@ -14,6 +15,8 @@ class UiTimer(object):
         """
         GUI start function.
         """
+        self.new_font = QFontDatabase.addApplicationFont('fonts/unispace bd.ttf')
+
         timer_instal.setObjectName("timer_instal")
         timer_instal.resize(600, 500)
         timer_instal.setMinimumSize(QtCore.QSize(600, 500))

@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtGui import QFontDatabase
 
 
 class UiMenu(object):
@@ -14,6 +15,8 @@ class UiMenu(object):
         """
         GUI start function.
         """
+        self.new_font = QFontDatabase.addApplicationFont('unispace bd.ttf')
+
         menu.setObjectName("menu")
         menu.setWindowModality(QtCore.Qt.WindowModality.NonModal)
         menu.setEnabled(True)

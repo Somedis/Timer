@@ -7,6 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtGui import QFontDatabase
 
 
 class UiAlarmClock(object):
@@ -14,6 +15,8 @@ class UiAlarmClock(object):
         """
         GUI start function.
         """
+        self.new_font = QFontDatabase.addApplicationFont('fonts/unispace bd.ttf')
+
         ac_instal.setObjectName("ac_instal")
         ac_instal.resize(600, 500)
         ac_instal.setMinimumSize(QtCore.QSize(600, 500))
