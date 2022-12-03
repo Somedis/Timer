@@ -11,6 +11,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 class UiTimerResult(object):
     def setup_ui(self, timer_result):
+        """
+        GUI start function.
+        """
         timer_result.setObjectName("timer_result")
         timer_result.resize(600, 500)
         timer_result.setMinimumSize(QtCore.QSize(600, 500))

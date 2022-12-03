@@ -1,9 +1,14 @@
+import sys
+
 from PyQt6 import QtWidgets
 
 from menu_ui import UiMenu
 
 
 class MainMenu(QtWidgets.QMainWindow, UiMenu):
+    """
+    Class that describes the behavior of the main menu.
+    """
 
     def __init__(self, parent=None) -> None:
         super(MainMenu, self).__init__(parent)
@@ -17,7 +22,6 @@ class MainMenu(QtWidgets.QMainWindow, UiMenu):
 
 
 if __name__ == '__main__':
-    import sys
     app = QtWidgets.QApplication(sys.argv)
     ui = MainMenu()
     ui.show()

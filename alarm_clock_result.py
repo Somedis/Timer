@@ -8,6 +8,9 @@ from alarm_clock_result_ui import UiAlarmClockResult
 
 
 class AlarmClockResultFunc(QtWidgets.QMainWindow, UiAlarmClockResult):
+    """
+    Class that adds the ability to play an audio track for an alarm clock.
+    """
 
     def __init__(self) -> None:
         super(AlarmClockResultFunc, self).__init__()

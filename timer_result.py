@@ -8,6 +8,9 @@ from timer_result_ui import UiTimerResult
 
 
 class TimerResultFunc(QtWidgets.QMainWindow, UiTimerResult):
+    """
+    Class that adds the ability to play an audio track for a timer.
+    """
 
     def __init__(self) -> None:
         super(TimerResultFunc, self).__init__()

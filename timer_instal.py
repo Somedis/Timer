@@ -8,6 +8,9 @@ from timer_instal_ui import UiTimer
 
 
 class Timer(UiTimer):
+    """
+    Class that describes the basic GUI behavior for a timer.
+    """
 
     def __init__(self) -> None:
         super(Timer, self).__init__()
@@ -30,12 +33,19 @@ class Timer(UiTimer):
         self.button_reset.setHidden(True)
 
     def show_time(self):
+        """
+        Function that displays the current time.
+        """
         current_time = QTime.currentTime()
         label_time = current_time.toString('hh:mm:ss')
         self.label_timeNum.setText(label_time)
 
 
 class TimerFunc(QtWidgets.QMainWindow, Timer):
+    """
+    Class in which the functions of the timer are registered and
+    are associated with the functions of the graphical interface.
+    """
 
     def __init__(self) -> None:
         super(TimerFunc, self).__init__()
@@ -55,6 +65,9 @@ class TimerFunc(QtWidgets.QMainWindow, Timer):
         self.button_continue.clicked.connect(self.func_continue)
 
     def func_start(self):
+        """
+        Function to start timer.
+        """
         self.label_time_left.setHidden(False)
         self.button_stop.setHidden(False)
         self.label_countdown.setHidden(False)
@@ -78,6 +91,9 @@ class TimerFunc(QtWidgets.QMainWindow, Timer):
         self.delta = timedelta(hours=hour, minutes=minute, seconds=second)
 
     def func_stop(self):
+        """
+        Function to stop timer.
+        """
         self.countdown.stop()
         self.button_run.setText('Timer stopped')
         self.button_run.setStyleSheet("background-color: #a81111")
@@ -88,6 +104,9 @@ class TimerFunc(QtWidgets.QMainWindow, Timer):
         self.button_back.setHidden(False)
 
     def func_reset(self):
+        """
+        Function to reset timer.
+        """
         self.button_continue.setHidden(True)
         self.button_reset.setHidden(True)
 
@@ -116,6 +135,9 @@ class TimerFunc(QtWidgets.QMainWindow, Timer):
                                       "}")
 
     def func_continue(self):
+        """
+        Function to continue the timer running.
+        """
         self.button_back.setHidden(True)
         self.button_continue.setHidden(True)
         self.button_reset.setHidden(True)
@@ -129,6 +151,9 @@ class TimerFunc(QtWidgets.QMainWindow, Timer):
         self.countdown.start()
 
     def display_time(self):
+        """
+        Function to display the countdown of the timer and control the internal timers.
+        """
         mm, ss = divmod(self.delta.seconds + 1, 60)
         hh, mm = divmod(mm, 60)
 

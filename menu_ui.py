@@ -11,6 +11,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 class UiMenu(object):
     def setup_ui(self, menu):
+        """
+        GUI start function.
+        """
         menu.setObjectName("menu")
         menu.setWindowModality(QtCore.Qt.WindowModality.NonModal)
         menu.setEnabled(True)

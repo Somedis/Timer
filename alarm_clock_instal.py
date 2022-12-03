@@ -8,6 +8,9 @@ from alarm_clock_instal_ui import UiAlarmClock
 
 
 class AlarmClock(UiAlarmClock):
+    """
+    Class that describes the basic GUI behavior for alarm clock.
+    """
 
     def __init__(self) -> None:
         super(AlarmClock, self).__init__()
@@ -43,25 +46,40 @@ class AlarmClock(UiAlarmClock):
         self.dateTimeEdit.setDisplayFormat(date_format)
 
     def set_datetime(self):
+        """
+        Function to set the desired date and time for the widget 'dateTimeEdit'.
+        """
         self.dateTimeEdit.setMinimumDate(QDate.currentDate())
         self.dateTimeEdit.setMinimumTime(QTime.currentTime())
 
     def show_time(self):
+        """
+        Function that displays the current time.
+        """
         current_time = QTime.currentTime()
         label_time = current_time.toString('hh:mm:ss')
         self.label_numTime.setText(label_time)
 
     def show_date(self):
+        """
+        Function that displays the current date.
+        """
         current_date = QDate.currentDate()
         label_date = current_date.toString('dd.MM.yyyy')
         self.label_numDate.setText(label_date)
 
     def hiding_ui(self):
+        """
+        Function that hides some graphic elements.
+        """
         self.button_back.setHidden(True)
         self.button_run.setHidden(True)
         self.dateTimeEdit.setHidden(True)
 
     def adding_ui(self):
+        """
+        Function that adds some graphical elements.
+        """
         self.button_stop.setHidden(False)
         self.label_countdown.setHidden(False)
         self.label_setdat.setText('Alarm Clock started')
@@ -71,6 +89,10 @@ class AlarmClock(UiAlarmClock):
 
 
 class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
+    """
+    Class in which the functions of the alarm clock are registered and
+    are associated with the functions of the graphical interface.
+    """
 
     def __init__(self) -> None:
         super(AlarmClockFunc, self).__init__()
@@ -90,6 +112,9 @@ class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
         self.button_reset.clicked.connect(self.func_reset)
 
     def func_start(self):
+        """
+        Function to start alarm clock.
+        """
         self.countdown.start()
 
         current_datetime = QDateTime.currentDateTime()
@@ -100,6 +125,9 @@ class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
         self.delta = self.end_date_py - self.start_date_py
 
     def func_stop(self):
+        """
+        Function to stop alarm clock.
+        """
         self.countdown.stop()
         self.button_stop.setHidden(True)
         self.button_reset.setHidden(False)
@@ -109,6 +137,9 @@ class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
                                         "color: #282e5c")
 
     def func_reset(self):
+        """
+        Function to reset alarm clock.
+        """
         self.button_reset.setHidden(True)
         self.label_countdown.setHidden(True)
 
@@ -119,6 +150,9 @@ class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
         self.label_setdat.setStyleSheet("color: #ff5398")
 
     def display_time(self):
+        """
+        Function to display the countdown of the alarm clock and control the internal timers.
+        """
         mm, ss = divmod(self.delta.seconds + 1, 60)
         hh, mm = divmod(mm, 60)
 

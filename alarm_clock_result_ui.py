@@ -11,6 +11,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 class UiAlarmClockResult(object):
     def setup_ui(self, ac_result):
+        """
+        GUI start function.
+        """
         ac_result.setObjectName("ac_result")
         ac_result.resize(600, 500)
         ac_result.setMinimumSize(QtCore.QSize(600, 500))
