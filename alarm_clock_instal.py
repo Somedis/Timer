@@ -157,7 +157,7 @@ class AlarmClockFunc(QtWidgets.QMainWindow, AlarmClock):
         hh, mm = divmod(mm, 60)
 
         self.label_countdown.setText(
-            f'{self.delta.days} дн. {hh:02} час. {mm:02} мин. {ss:02} сек.')
+            f'{self.delta.days} days and {hh:02}:{mm:02}:{ss:02}')
 
         self.delta = self.delta - timedelta(seconds=0.001)
 

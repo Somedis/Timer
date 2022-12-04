@@ -192,7 +192,7 @@ class UiAlarmClock(object):
         self.label_countdown.setGeometry(QtCore.QRect(20, 205, 520, 50))
         font = QtGui.QFont()
         font.setFamily("Unispace")
-        font.setPointSize(20)
+        font.setPointSize(22)
         font.setBold(True)
         font.setWeight(75)
         self.label_countdown.setFont(font)

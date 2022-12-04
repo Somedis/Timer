@@ -1,3 +1,4 @@
+import os
 import sys
 
 from PyQt6 import QtWidgets
@@ -6,6 +7,8 @@ from alarm_clock_instal import AlarmClockFunc
 
 from alarm_clock_result import AlarmClockResultFunc
 
+from error import UiError
+
 from menu import MainMenu
 
 from timer_instal import TimerFunc
@@ -13,7 +16,70 @@ from timer_instal import TimerFunc
 from timer_result import TimerResultFunc
 
 
-class StartMenu(QtWidgets.QMainWindow):
+class CheckFiles():
+    """
+    Class of file integrity checker.
+    """
+
+    FOLDERS = ('sounds', 'pics', 'fonts')
+    SOUNDS = ('Alarm Clock.mp3', 'Timer.mp3')
+    PICTURES = ('alarmclock_instal.png', 'alarmclock_menu.png', 'alarmclock_result.png',
+                'send_time.png', 'timer_instal.png', 'timer_menu.png', 'timer_result.png')
+    FONTS = ('unispace bd.ttf', )
+
+    def check_folders(self):
+        """
+        Folder check function.
+        """
+        self.current_dir = os.getcwd()
+        self.files_list = os.listdir(self.current_dir)
+        for folder in __class__.FOLDERS:
+            if folder in self.files_list:
+                pass
+            else:
+                return 0
+
+    def check_sounds(self):
+        """
+        Sound check function.
+        """
+        if self.check_folders() != 0:
+            for sound in __class__.SOUNDS:
+                if sound in os.listdir('sounds'):
+                    pass
+                else:
+                    return 0
+        else:
+            return 0
+
+    def check_pics(self):
+        """
+        Pictures check function.
+        """
+        if self.check_folders() != 0:
+            for pics in __class__.PICTURES:
+                if pics in os.listdir('pics'):
+                    pass
+                else:
+                    return 0
+        else:
+            return 0
+
+    def check_fonts(self):
+        """
+        Fonts check function.
+        """
+        if self.check_folders() != 0:
+            for font in __class__.FONTS:
+                if font in os.listdir('fonts'):
+                    pass
+                else:
+                    return 0
+        else:
+            return 0
+
+
+class StartMenu(QtWidgets.QMainWindow, CheckFiles):
     """
     Control class that links individual GUIs to each other.
     """
@@ -21,13 +87,30 @@ class StartMenu(QtWidgets.QMainWindow):
     def __init__(self) -> None:
         super(StartMenu, self).__init__()
 
+        self.error = UiError()
+
         self.menu = MainMenu()
         self.timer = TimerFunc()
         self.timerResult = TimerResultFunc()
         self.alarmClock = AlarmClockFunc()
         self.alarmClockResult = AlarmClockResultFunc()
 
-        self.main_menu()
+        self.start_program()
+
+    def start_program(self):
+        """
+        Function that checks the integrity of files and launches a program.
+        """
+        if self.check_sounds() != 0:
+            if self.check_pics() != 0:
+                if self.check_fonts() != 0:
+                    self.main_menu()
+                else:
+                    self.error.setup_ui(self)
+            else:
+                self.error.setup_ui(self)
+        else:
+            self.error.setup_ui(self)
 
     def main_menu(self):
         """
