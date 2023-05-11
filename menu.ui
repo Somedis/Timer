@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu</class>
+ <widget class="QMainWindow" name="menu">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #0d1131;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_main">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>580</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #181b3f;
+border-radius: 20</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame_top">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>580</width>
+       <height>130</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #282e5c;
+border-radius: 20</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_title">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>35</y>
+        <width>461</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Unispace</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;
+</string>
+      </property>
+      <property name="text">
+       <string>Select application type</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_titlePic">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>15</y>
+        <width>70</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>pics/send_time.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_left">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>275</width>
+       <height>330</height>
+      </rect>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #282e5c;
+border-radius: 20</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_picAC">
+      <property name="geometry">
+       <rect>
+        <x>37</x>
+        <y>30</y>
+        <width>200</width>
+        <height>185</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>pics/alarmclock_menu.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_alarmClock">
+      <property name="geometry">
+       <rect>
+        <x>42</x>
+        <y>250</y>
+        <width>190</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Unispace</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {	
+	border: 3px solid #3051a8;
+	border-radius: 20;
+	color: white;
+}
+
+QPushButton:hover {
+	background-color: #3051a8
+}
+
+QPushButton:pressed {
+	background-color: #3bf3d4
+}</string>
+      </property>
+      <property name="text">
+       <string>Alarm Clock</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frame_right">
+     <property name="geometry">
+      <rect>
+       <x>295</x>
+       <y>140</y>
+       <width>275</width>
+       <height>330</height>
+      </rect>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #282e5c;
+border-radius: 20</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="button_timer">
+      <property name="geometry">
+       <rect>
+        <x>42</x>
+        <y>250</y>
+        <width>190</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Unispace</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {	
+	border: 3px solid #3051a8;
+	border-radius: 20;
+	color: white;
+}
+
+QPushButton:hover {
+	background-color: #3051a8
+}
+
+QPushButton:pressed {
+	background-color: #3bf3d4
+}</string>
+      </property>
+      <property name="text">
+       <string>Timer</string>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_picT">
+      <property name="geometry">
+       <rect>
+        <x>37</x>
+        <y>25</y>
+        <width>200</width>
+        <height>185</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>pics/timer_menu.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
